@@ -1,6 +1,20 @@
 # Graphy - Ultimate FPS Counter - Stats Monitor & Debugger (Unity)
 
-**Links:** [Discord](https://discord.gg/2KgNEHK?) | [Mail](martintayx@gmail.com) | [Twitter](https://twitter.com/martinTayx) | [Asset store](https://assetstore.unity.com/packages/tools/gui/graphy-ultimate-stats-monitor-debugger-105778) | [Forum post](https://forum.unity.com/threads/graphy-ultimate-stats-monitor-debugger-released.517387/) | [Donations](https://www.paypal.me/MartinPaneUK)
+[![openupm](https://img.shields.io/npm/v/com.tayx.graphy?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.tayx.graphy/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://github.com/Tayx94/graphy/blob/master/LICENSE)
+[![Unity 2019.4+](https://img.shields.io/badge/unity-2019.4%2B-blue.svg)](https://unity3d.com/get-unity/download)
+
+[![Open Issues](https://img.shields.io/github/issues-raw/tayx94/graphy)](https://github.com/Tayx94/graphy/issues)
+[![Downloads](https://img.shields.io/github/downloads/tayx94/graphy/total)](https://github.com/Tayx94/graphy/releases)
+[![Contributors](https://img.shields.io/github/contributors/tayx94/graphy)](https://github.com/Tayx94/graphy/graphs/contributors)
+[![Stars](https://img.shields.io/github/stars/Tayx94/graphy)](https://github.com/Tayx94/graphy)
+[![Forks](https://img.shields.io/github/forks/Tayx94/graphy)](https://github.com/Tayx94/graphy)
+
+[![Chat Discord](https://img.shields.io/discord/406037880314789889)](https://discord.gg/2KgNEHK?)
+
+[![Twitter](https://img.shields.io/twitter/follow/martintayx?label=Follow&style=social)](http://twitter.com/intent/user?screen_name=martinTayx)
+
+**Links:** [Discord](https://discord.gg/2KgNEHK?) | [Mail](mailto:martintayx@gmail.com) | [Twitter](http://twitter.com/intent/user?screen_name=martinTayx) | [Asset store](https://assetstore.unity.com/packages/tools/gui/graphy-ultimate-stats-monitor-debugger-105778) | [Forum post](https://forum.unity.com/threads/graphy-ultimate-stats-monitor-debugger-released.517387/) | [Donations](https://www.paypal.me/MartinPaneUK)
 
 **WINNER** of the **BEST DEVELOPMENT ASSET** in the **Unity Awards 2018**.
 
@@ -41,9 +55,44 @@ The debugger allows you to set one or more conditions, that if met will have the
 - [Twitter](https://twitter.com/martinTayx)
 - [Discord](https://discord.gg/2KgNEHK?)
 
+## Installation
+1. The package is available on the [openupm registry](https://openupm.com). You can install it via [openupm-cli](https://github.com/openupm/openupm-cli).
+```
+openupm add com.tayx.graphy
+```
+2. You can add this package in Unity Package Manager by adding it to the Scoped Registries at Edit > Project Settings > Package Manager > Scoped Registries
+
+Add a section on the left called package.openupm.com
+On the right, add 
+Name: package.openupm.com
+URL: https://package.openupm.com
+Scopes:
+com.openupm
+com.tayx.graphy
+
+![image](https://github.com/ROBYER1/graphy/assets/10745594/0a6328d1-4a00-47d4-97d0-964535c37400)
+
+Then in Window > Package Manager, you can select Packages: My Registry to see Graphy as a package to download
+![image](https://github.com/ROBYER1/graphy/assets/10745594/dbf18c6e-a170-4128-b6c6-f12d9cb75ea6)
+
+3. After step 2, you can also install via git url by adding this entry in your **manifest.json**
+```
+{
+  "dependencies": {
+    ...
+    "com.tayx.graphy": "https://github.com/Tayx94/graphy.git",
+    ...
+  }
+}
+```
+4. You can also download it from the [Asset Store](https://assetstore.unity.com/packages/tools/gui/graphy-ultimate-stats-monitor-debugger-105778)
+
+5. Click here for old version that supports Unity 5.4+: 
+[![Unity 5.4+](https://img.shields.io/badge/unity-5.4%2B-blue.svg)](https://github.com/Tayx94/graphy/releases/tag/v1.6.0-Unity5.4)
+
 ## Development of Graphy
 
-Maintainer and main developer: **Martín Pane**
+Maintainer and main developer: **Martín Pane** [![Twitter](https://img.shields.io/twitter/follow/martintayx?label=Follow&style=social)](http://twitter.com/intent/user?screen_name=martinTayx)
 
 Graphy is **FREE** to use, but if it helped you and you want to contribute to its development, feel free to leave a donation! 
 
@@ -61,34 +110,17 @@ You can also join the [Discord](https://discord.gg/2KgNEHK?) for active discussi
 
 ### Roadmap
 
-**Planned features (DEFINITELY YES):**
+**Planned features (No ETA):**
 
-  - Console Module: (developed in the [console-module](https://github.com/Tayx94/graphy/tree/console-module) branch)
-    - Show Debug.Log messages from Unity in this module.
-    - Log Graphy messages to this module.
-    - Integrate Graphy commands into it.
-    - Allow custom commands from user.
   - Add GfxDriver stats to the RAM module.
-  - Prewarm framerates: X seconds where min/max fps are not registered to avoid loading spikes registering.
   - Scale Canvas (GetComponent<Canvas>().scaleFactor *= multiplier;) -> If it changes, set again.
   - Make a template for a graph + text module so people can create their own easily.
-  - Make UI layout adapt on the fly to compact it when not showing graphs.
-  - Show the UnityStats (batches, draw calls, etc.) data in the Editor.
-    
-**Other features (DEFINITELY MAYBE):** 
-
-  - Network Stats Module.
-  - Audio Module:
-  	- Average of the whole sound.
-	- Indicator for LUFS.
   - Allow storing FPS for a predetermined time to allow benchmarks.
   - Dump all Graphy Data as a string to:
   	- File.
 	- Send to server.
 	- Send mail.
   - Add a preprocessor key #GRAPHY to avoid adding the asset in builds.
-  - Click on the graph to change to a minimalised version.
-  - Be able to only show one type of ram in the graph (mostly to be able to see the "mono" ram value spikes with more ease).
   
 ## License
 
